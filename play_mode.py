@@ -1,5 +1,6 @@
 from pico2d import *
 
+from bird import Bird
 from boy import Boy
 from grass import Grass
 import game_world
@@ -26,6 +27,9 @@ def init():
     global running
 
     running = True
+    bird = Bird()
+    game_world.add_object(bird, 2)
+
     grass = Grass()
     game_world.add_object(grass, 0)
 
